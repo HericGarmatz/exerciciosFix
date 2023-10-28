@@ -14,7 +14,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        SimpleDateFormat sdf = new SimpleDateFormat("DD/MM/YYYY");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<Product> list = new ArrayList<Product>();
 
         System.out.print("Informe a quantidade de produtos: ");
@@ -33,7 +33,7 @@ public class App {
             }else if(op=='u'){
                 System.out.print("Manufacture date(DD/MM/YYYY):");
                 Date dateManufacture = sdf.parse(sc.next());
-                 list.add(new UsedProduct(name, price, dateManufacture));
+                list.add(new UsedProduct(name, price, dateManufacture));
             }else{
                 list.add(new Product(name, price));
             }
